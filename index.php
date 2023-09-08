@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set("error_reporting", E_ALL);
+ini_set("error_log", __DIR__ . "/php.error.log");
+
 require __DIR__ . "/library.php";
 require __DIR__ . "/configuration.php";
 
