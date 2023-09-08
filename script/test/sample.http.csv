@@ -1,0 +1,7 @@
+# Title, URL, Acceptable HTTP status code list, Alert email address list, Alert Slack channel list
+# Own
+	First site,domain1.tld,"200, 301, 302",5,"alert@address.com, alert@address2.com","slack-channel-1, slack-channel-2"
+	Second site,domain2.tld,"200, 301, 302",5,"alert@address.com, alert@address2.com","slack-channel-1, slack-channel-2"
+# My clients
+	Third site,domain3.tld,"200, 301, 302",5,"alert@address.com, alert@address2.com","slack-channel-1, slack-channel-2"
+	Fourth site,domain4.tld,"200, 301, 302",5,"alert@address.com, alert@address2.com","slack-channel-1, slack-channel-2"

@@ -1,0 +1,11 @@
+# Path
+#library/external/
+temp/
+
+# File
+# 	Specific
+configuration.php
+script/test/http.csv
+
+# 	Pattern
+*.code-*
