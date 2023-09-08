@@ -6,12 +6,20 @@ Periodically checks hosts if they are available and sends alerts to email & Slac
 	- Create App & deploy
 	- Create channels
 - **Application**
-	- Rename `sample.configuration.php` to `configuration.php` and adjust with your configuration
+	- Clone repository file to `/my/hostmeow/path` on your server
+	- Rename `/my/hostmeow/path/sample.configuration.php` file to `configuration.php` and modify as needed
 		- Set `SMTP` configuration for mail send out
 		- Set `HostAlertSlackAuthorizationToken` for Slack channel message
-	- Rename `script/test/sample.http.csv` file to `http.csv` and adjust with host list
-	- **CronJob**
-		- Clone repository file to `/my/hostmeow/path`
-		- Create a per minute cron job to execute `/my/hostmeow/path/test-http.php` script
-			- Cron command: `php /my/hostmeow/path/test-http.php > /dev/null &`
-			- Full Cron command: `* * * * * php /my/hostmeow/path/test-http.php > /dev/null &`
+	- Rename `script/test/sample.http.csv` file to `http.csv` and modify the host list
+	- **CronJob**: Per minute cron job to execute `/my/hostmeow/path/test-http.php` script
+		- Cron command: `php /my/hostmeow/path/test-http.php > /dev/null &`
+		- Full Cron command: `* * * * * php /my/hostmeow/path/test-http.php > /dev/null &`
+	- **Note**
+		- Shell command execution permission is required for PHP
+		- `/my/hostmeow/path/temp` path must remain WRITEable for PHP
+
+## How to
+- **Check for error**: An error log `/my/hostmeow/path/error.php.log` file will be created upon any PHP error
+- No **host scan** happenning
+	- Check the `script/test/http.csv` file is exists with host list
+	- Ensure the **CronJob** is set correctly
