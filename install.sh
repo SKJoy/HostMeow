@@ -1,2 +1,2 @@
-cp sample.configuration.php configuration.php.remove
-cp script/test/sample.http.csv http.csv.remove
+cp sample.configuration.php configuration.php
+cp script/test/sample.http.csv script/test/http.csv
